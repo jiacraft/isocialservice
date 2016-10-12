@@ -1,0 +1,48 @@
+package com.intuit.social.entity;
+
+import java.io.Serializable;
+
+public class Message implements Serializable {
+
+	/**
+	 * 	generated
+	 */
+	private static final long serialVersionUID = 3274385866213647339L;
+	
+	private int msgId;
+	
+	private String msg;
+	
+	private String ownerId;
+	
+	private long timeMs;
+	
+	public Message (int mId, String msg, String uid, long time) {
+		this.msgId = mId;
+		this.msg = msg;
+		this.ownerId = uid;
+		this.timeMs = time;
+	}
+	
+	public Message (String msg, String uid) {
+		this.msg = msg;
+		this.ownerId = uid;
+	}
+
+	public int getMsgId() {
+		return msgId;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public String getOwnerId() {
+		return ownerId;
+	}
+
+	public long getTimeMs() {
+		return timeMs;
+	}
+	
+}
